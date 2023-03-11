@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screenMargin">16dp</dimen>
+    <dimen name="title">16sp</dimen>
+    <dimen name="body">12sp</dimen>
+</resources>
