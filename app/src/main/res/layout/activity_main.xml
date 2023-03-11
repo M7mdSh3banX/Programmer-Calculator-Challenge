@@ -44,6 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/Decimal10"
+        android:layout_marginTop="@dimen/button_margin"
         app:boxBackgroundColor="@color/offWhite"
         app:boxCornerRadiusBottomEnd="@dimen/corners"
         app:boxCornerRadiusBottomStart="@dimen/corners"
@@ -147,21 +148,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/calculate_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_margin"
-        android:background="@drawable/calculate_button"
-        android:gravity="center"
-        android:text="@string/calculate"
-        android:textColor="@color/white"
-        android:textSize="@dimen/title"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/hexadecimalField" />
-
-    <Button
         android:id="@+id/clear_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -174,6 +160,6 @@
         app:backgroundTint="@null"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
         app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/calculate_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/hexadecimalField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
