@@ -6,13 +6,174 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/screenMargin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/screenMargin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/screenMargin" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vector_image"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline"
+        android:contentDescription="@null" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/decimalField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Decimal10"
+        app:boxBackgroundColor="@color/offWhite"
+        app:boxCornerRadiusBottomEnd="@dimen/corners"
+        app:boxCornerRadiusBottomStart="@dimen/corners"
+        app:boxCornerRadiusTopEnd="@dimen/corners"
+        app:boxCornerRadiusTopStart="@dimen/corners"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error"
+        app:hintTextColor="@color/primaryBlack"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/decimalInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/binaryField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Binary2"
+        app:boxBackgroundColor="@color/offWhite"
+        app:boxCornerRadiusBottomEnd="@dimen/corners"
+        app:boxCornerRadiusBottomStart="@dimen/corners"
+        app:boxCornerRadiusTopEnd="@dimen/corners"
+        app:boxCornerRadiusTopStart="@dimen/corners"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error"
+        app:hintTextColor="@color/primaryBlack"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/decimalField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/binaryInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/octalField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Octal8"
+        app:boxBackgroundColor="@color/offWhite"
+        app:boxCornerRadiusBottomEnd="@dimen/corners"
+        app:boxCornerRadiusBottomStart="@dimen/corners"
+        app:boxCornerRadiusTopEnd="@dimen/corners"
+        app:boxCornerRadiusTopStart="@dimen/corners"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error"
+        app:hintTextColor="@color/primaryBlack"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/binaryField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/octalInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hexadecimalField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Hexadecimal16"
+        app:boxBackgroundColor="@color/offWhite"
+        app:boxCornerRadiusBottomEnd="@dimen/corners"
+        app:boxCornerRadiusBottomStart="@dimen/corners"
+        app:boxCornerRadiusTopEnd="@dimen/corners"
+        app:boxCornerRadiusTopStart="@dimen/corners"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error"
+        app:hintTextColor="@color/primaryBlack"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/octalField">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/hexadecimalInputField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/calculate_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin"
+        android:background="@drawable/calculate_button"
+        android:gravity="center"
+        android:text="@string/calculate"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/hexadecimalField" />
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin"
+        android:background="@drawable/clear_button"
+        android:gravity="center"
+        android:text="@string/clear"
+        android:textColor="@color/primaryBlack"
+        android:textSize="@dimen/title"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

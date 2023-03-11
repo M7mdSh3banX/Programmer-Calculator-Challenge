@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProgrammerCalculatorChallenge</string>
+    <string name="Decimal10">Decimal (10)</string>
+    <string name="Binary2">Binary (2)</string>
+    <string name="Octal8">Octal (8)</string>
+    <string name="Hexadecimal16">Hexadecimal (16)</string>
+    <string name="calculate">Calculate</string>
+    <string name="clear">clear</string>
 </resources>

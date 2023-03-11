@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primaryColor">#F0A04B</color>
+    <color name="primaryVariantColor">#99F0A04B</color>
     <color name="secondaryColor">#183A1D</color>
     <color name="primaryBlack">#000000</color>
     <color name="secondaryBlack">#DE000000</color>
@@ -8,5 +9,6 @@
     <color name="fourthBlack">#61000000</color>
     <color name="white">#FFFFFF</color>
     <color name="offWhite">#F8F8F8</color>
-    <color name="error">#FF0D0D</color>
+    <color name="clear_pressed">#9C3838</color>
+    <color name="error">#610404</color>
 </resources>
