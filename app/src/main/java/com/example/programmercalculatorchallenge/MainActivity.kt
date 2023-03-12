@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         decimalInputField.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (decimalInputField.hasFocus()) {
-                    val decimal = s.toString().toLongOrNull(10) ?: return
+                    val decimal = s.toString().toULongOrNull(10) ?: return
 
                     binaryInputField.setText(decimal.toString(2))
                     octalInputField.setText(decimal.toString(8))
