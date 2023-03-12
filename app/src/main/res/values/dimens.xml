@@ -5,4 +5,6 @@
     <dimen name="body">12sp</dimen>
     <dimen name="corners">8dp</dimen>
     <dimen name="button_margin">64dp</dimen>
+    <dimen name="vector_size">160dp</dimen>
+    <dimen name="no_size">0dp</dimen>
 </resources>

@@ -29,29 +29,30 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="@dimen/vector_size"
+        android:layout_height="@dimen/vector_size"
+        android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/vector_image"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
         app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toTopOf="@+id/top_guideline"
-        android:contentDescription="@null" />
+        app:layout_constraintTop_toTopOf="@+id/top_guideline" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/decimalField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/no_size"
         android:layout_height="wrap_content"
-        android:hint="@string/Decimal10"
         android:layout_marginTop="@dimen/button_margin"
+        android:hint="@string/Decimal10"
         app:boxBackgroundColor="@color/offWhite"
         app:boxCornerRadiusBottomEnd="@dimen/corners"
         app:boxCornerRadiusBottomStart="@dimen/corners"
         app:boxCornerRadiusTopEnd="@dimen/corners"
         app:boxCornerRadiusTopStart="@dimen/corners"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:endIconMode="clear_text"
-        app:errorEnabled="true"
         app:helperTextTextColor="@color/error"
         app:hintTextColor="@color/primaryBlack"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
@@ -62,7 +63,9 @@
             android:id="@+id/decimalInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:digits="@string/decimal_digits"
+            android:inputType="numberDecimal"
+            android:maxLength="16" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,6 +80,8 @@
         app:boxCornerRadiusBottomStart="@dimen/corners"
         app:boxCornerRadiusTopEnd="@dimen/corners"
         app:boxCornerRadiusTopStart="@dimen/corners"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:helperTextTextColor="@color/error"
@@ -89,7 +94,9 @@
             android:id="@+id/binaryInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:digits="@string/binary_digits"
+            android:inputType="numberDecimal"
+            android:maxLength="16" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,6 +111,8 @@
         app:boxCornerRadiusBottomStart="@dimen/corners"
         app:boxCornerRadiusTopEnd="@dimen/corners"
         app:boxCornerRadiusTopStart="@dimen/corners"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:helperTextTextColor="@color/error"
@@ -116,7 +125,9 @@
             android:id="@+id/octalInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
+            android:digits="@string/octal_digits"
+            android:inputType="numberDecimal"
+            android:maxLength="16" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,6 +142,8 @@
         app:boxCornerRadiusBottomStart="@dimen/corners"
         app:boxCornerRadiusTopEnd="@dimen/corners"
         app:boxCornerRadiusTopStart="@dimen/corners"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:helperTextTextColor="@color/error"
@@ -143,13 +156,15 @@
             android:id="@+id/hexadecimalInputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:digits="@string/hexadecimal_digits"
+            android:inputType="text"
+            android:maxLength="16" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/clear_btn"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/no_size"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin"
         android:background="@drawable/clear_button"

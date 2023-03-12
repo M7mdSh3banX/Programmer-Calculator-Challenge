@@ -6,4 +6,8 @@
     <string name="Hexadecimal16">Hexadecimal (16)</string>
     <string name="calculate">Calculate</string>
     <string name="clear">clear</string>
+    <string name="decimal_digits">0123456789</string>
+    <string name="binary_digits">01</string>
+    <string name="octal_digits">01234567</string>
+    <string name="hexadecimal_digits">0123456789AaBbCcDdEeFf</string>
 </resources>
