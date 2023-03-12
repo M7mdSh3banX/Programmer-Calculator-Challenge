@@ -10,4 +10,16 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="editTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/offWhite</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/corners</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/corners</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/corners</item>
+        <item name="boxCornerRadiusTopStart">@dimen/corners</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterMaxLength">16</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="hintTextColor">@color/primaryBlack</item>
+    </style>
 </resources>
